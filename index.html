@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Felipe Castro Richter" />
+    <title>Reserva de Horas</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container row">
+      <section class="section col s8 offset-s2">
+        <h2 class="center">Reserva de Horas</h2>
+        <div class="divider"></div>
+        <div class="row">
+          <form class="col s12 center">
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix">card_membership</i>
+              <input id="rut" type="text" class="validate" />
+              <label for="rut">Rut</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="nombres" type="text" class="validate" />
+              <label for="nombres">Nombres</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">group</i>
+              <input id="apellidos" type="tel" class="validate" />
+              <label for="apellidos">Apellidos</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">cake</i>
+              <input id="edad" type="text" class="validate" />
+              <label for="edad">Edad</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="tel" class="validate" />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">today</i>
+              <input id="fecha" type="text" class="validate" />
+              <label for="fecha">Fecha</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <i class="material-icons prefix">watch_later</i>
+              <input id="hora" type="tel" class="validate" />
+              <label for="hora">Hora</label>
+            </div>
+          </form>
+          <div class="row center">
+            <button id="btn-reservar" class="btn waves-effect waves-light">Reservar <i class="material-icons right">send</i></button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container center">
+      <!-- Modal Structure -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h4>Reserva de hora</h4>
+          <p id="texto-modal">Texto</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Site JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
