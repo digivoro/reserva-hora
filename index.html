@@ -14,15 +14,14 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body class="grey darken-4">
+  <body>
     <div class="container row">
-      <section class="section col s10 offset-s1 l8 offset-l2">
+      <h3 class="center">Reserva de Horas</h3>
+      <section class="section col s10 offset-s1 l8 offset-l2 z-depth-2">
         <div class="row">
-          <h3 class="white-text center">Reserva de Horas</h3>
-
-          <form class="col s12 lime lighten-5 z-depth-2">
+          <!-- Form prellenado -->
+          <!-- <form class="col s12">
             <div class="row">
-              <!-- Paciente -->
               <h5 class="col s12 l12 center">Paciente</h5>
 
               <div class="input-field col s12 l12">
@@ -50,7 +49,6 @@
                 <input id="email" type="email" class="validate" value="nkardia@gmail.com" />
                 <label for="email">Email</label>
               </div>
-              <!-- Atención -->
               <h5 class="col s12 center">Atención</h5>
 
               <div class="input-field col s12">
@@ -60,7 +58,7 @@
                   <option value="radiología">Radiología</option>
                   <option value="dental">Dental</option>
                 </select>
-                <label>Especialidad</label>
+                <label for="especialidad">Especialidad</label>
               </div>
               <div class="input-field col s12 l6">
                 <i class="material-icons prefix teal-text">today</i>
@@ -69,17 +67,94 @@
               </div>
               <div class="input-field col s12 l6">
                 <i class="material-icons prefix teal-text">watch_later</i>
-                <input id="hora" type="text" class="validate" value="11:00" />
-                <label for="hora">Hora Reserva</label>
+                <select id="hora">
+                  <option value="09:00" selected>09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+                <label>Especialidad</label>
+              </div>
+            </div>
+          </form> -->
+
+          <!-- Form por llenar -->
+          <form class="col s12">
+            <div class="row">
+              <h5 class="col s12 l12 center">Paciente</h5>
+              <div class="input-field col s12 l12">
+                <i class="material-icons prefix teal-text">card_membership</i>
+                <input id="rut" type="text" class="validate" />
+                <label for="rut">Rut</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">person</i>
+                <input id="nombres" type="text" class="validate" />
+                <label for="nombres">Nombres</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">group</i>
+                <input id="apellidos" type="text" class="validate" />
+                <label for="apellidos">Apellidos</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">cake</i>
+                <input id="edad" type="text" class="validate" />
+                <label for="edad">Edad</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">email</i>
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+
+              <h5 class="col s12 center">Atención</h5>
+              <div class="input-field col s12">
+                <i class="material-icons prefix teal-text">local_pharmacy</i>
+                <select id="especialidad">
+                  <option value="traumatología" selected>Traumatología</option>
+                  <option value="radiología">Radiología</option>
+                  <option value="dental">Dental</option>
+                </select>
+                <label for="especialidad">Especialidad</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">today</i>
+                <input id="fecha" type="text" class="validate" />
+                <label for="fecha">Fecha Reserva</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix teal-text">watch_later</i>
+                <select id="hora">
+                  <option value="09:00" selected>09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+                <label>Especialidad</label>
               </div>
             </div>
           </form>
+
+          <div class="row center">
+            <button id="btn-reservar" class="btn pulse disabled waves-effect waves-light z-depth-2 hoverable">Reservar <i class="material-icons right">send</i></button>
+          </div>
         </div>
       </section>
     </div>
-    <section class="section center">
-      <button id="btn-reservar" class="btn pulse waves-effect waves-light z-depth-2 hoverable">Reservar <i class="material-icons right">send</i></button>
-    </section>
+    <section class="section center"></section>
     <div class="container center">
       <!-- Modal Structure -->
       <div id="modal" class="modal">
