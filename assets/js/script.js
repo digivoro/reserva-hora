@@ -14,6 +14,7 @@ const edadElem = document.querySelector("#edad");
 const fechaElem = document.querySelector("#fecha");
 const especialidadElem = document.querySelector("#especialidad");
 const horaElem = document.querySelector("#hora");
+const btnReservaElem = document.querySelector("#btn-reservar");
 
 function abrirModal() {
   let instance = M.Modal.getInstance(document.querySelector("#modal"));
@@ -44,9 +45,11 @@ function validarDatos() {
   console.log("-------------------");
 
   if (validacionEmail && validacionRut && validacionNombre && validacionApellidos && validacionEdad && validacionFecha) {
-    document.querySelector("#btn-reservar").classList.remove("disabled");
+    btnReservaElem.classList.remove("disabled");
+    btnReservaElem.classList.add("pulse");
   } else {
-    document.querySelector("#btn-reservar").classList.add("disabled");
+    btnReservaElem.classList.add("disabled");
+    btnReservaElem.classList.remove("pulse");
   }
 }
 
@@ -71,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var instanciasSelectores = M.FormSelect.init(selectores);
 });
 
-document.getElementById("btn-reservar").addEventListener("click", reserva);
+btnReservaElem.addEventListener("click", reserva);
 rutElem.addEventListener("input", validarDatos);
 nombresElem.addEventListener("input", validarDatos);
 apellidosElem.addEventListener("input", validarDatos);
